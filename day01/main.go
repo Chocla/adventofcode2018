@@ -13,7 +13,6 @@ func main() {
 	fmt.Println("Part 1:", partOne(path), "\nPart 2:", partTwo(path))
 }
 
-//add numbers of file
 func partOne(path string) (freq int) {
 	file, _ := os.Open(path)
 	scan := bufio.NewScanner(file)
