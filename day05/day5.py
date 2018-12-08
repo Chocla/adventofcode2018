@@ -9,7 +9,7 @@ def shortenPolymer(s):
         for i in range(len(s)-2):
             if i >= len(s) - 1:
                 break
-            if (s[i].islower() and s[i].upper() == s[i+1]) or (s[i].isupper() and s[i].lower() == s[i+1]):
+            if ord(s[i]) ^ ord(s[i+1]) == 32:
                 s = s[:i] + s[i+2:]
                 changed = True
     return len(s)
